@@ -65,4 +65,4 @@ Register your models in orders/admin.py.
 
 Step 9: Run Server
 python manage.py runserver
-Visit http://127.0.0.1:8000/ in your web browser.# Restaurant-Management-System
+Visit http://127.0.0.1:8000/ in your web browser.
