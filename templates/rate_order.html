@@ -1,0 +1,12 @@
+{% extends 'orders/base.html' %}
+
+{% block title %}Rate Order{% endblock %}
+
+{% block content %}
+    <h2>Rate Order</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit Rating</button>
+    </form>
+{% endblock %}

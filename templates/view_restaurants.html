@@ -1,0 +1,14 @@
+{% extends 'orders/base.html' %}
+
+{% block title %}View Restaurants{% endblock %}
+
+{% block content %}
+    <h1>View Restaurants</h1>
+    <ul>
+        {% for restaurant in restaurants %}
+            <li>
+                <a href="{% url 'view_menu_items' restaurant.id %}">{{ restaurant.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1>Dashboard</h1>
+{% if user.is_restaurant_manager %}
+    <a class="btn btn-primary" href="{% url 'add_restaurant' %}">Add Restaurant</a>
+    <a class="btn btn-secondary" href="{% url 'add_branch' %}">Add Branch</a>
+    <a class="btn btn-success" href="{% url 'add_menu_item' %}">Add Menu Item</a>
+    <a class="btn btn-info" href="{% url 'view_orders' %}">View Orders</a>
+{% elif user.is_branch_manager %}
+    <a class="btn btn-success" href="{% url 'add_menu_item' %}">Add Menu Item</a>
+    <a class="btn btn-info" href="{% url 'view_orders' %}">View Orders</a>
+{% elif user.is_deliveryman %}
+    <a class="btn btn-info" href="{% url 'view_orders' %}">View Orders</a>
+{% else %}
+    <a class="btn btn-primary" href="{% url 'view_restaurants' %}">View Restaurants</a>
+    <a class="btn btn-info" href="{% url 'view_orders' %}">View My Orders</a>
+{% endif %}
+{% endblock %}
