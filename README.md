@@ -4,8 +4,8 @@
 The **Restaurant Management System** is a web application built using Django that allows restaurant managers and staff to efficiently handle orders, manage menu items, and generate receipts.
 
 ## 👥 Team
-- **Developer:** [Your Name]
-- **Contributors:** [If applicable]
+- **Developer:** Imani Kingsley
+- 
 
 ## 🏗️ Architecture & Technologies Used
 - **Backend:** Django (Python)
@@ -30,7 +30,7 @@ The **Restaurant Management System** is a web application built using Django tha
 
 ### 📥 Clone the Repository
 ```sh
-git clone https://github.com/yourusername/restaurant-management.git
+git clone https://github.com/ImanimK/Restaurant-Management-System.git
 cd restaurant-management
 ```
 
@@ -51,29 +51,3 @@ python manage.py runserver
 ```
 Open `http://127.0.0.1:8000/` in your browser.
 
-## 🎯 Development Report
-
-### ✅ **Successes**
-- Successfully built an authentication system for managers and staff.
-- Implemented an intuitive dashboard for easy navigation.
-- Orders and menu items are stored and retrieved efficiently.
-
-### ⚠️ **Challenges**
-- Initial issues with URL configurations and template rendering.
-- Ensuring role-based access control for managers and staff.
-
-### 🔄 **Areas for Improvement**
-- Implement API endpoints for mobile app integration.
-- Enhance the UI for a more modern experience.
-
-## 🎓 Lessons Learned & Next Steps
-- Improved understanding of Django models and views.
-- Better handling of user authentication and permissions.
-- Future improvements: **Add reports & analytics**, **expand to multiple restaurant branches**.
-
-## 📜 License
-This project is licensed under the MIT License.
-
----
-
-🚀 **Developed with Django & ❤️ by [Your Name]**
