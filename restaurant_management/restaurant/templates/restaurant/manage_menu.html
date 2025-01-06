@@ -1,0 +1,33 @@
+{% extends "restaurant/base.html" %}
+
+{% block title %}Manage Menu{% endblock %}
+
+{% block content %}
+<h2>Manage Menu</h2>
+<a href="{% url 'add_menu_item' %}" class="btn btn-success">Add New Item</a>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in menu_items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td>${{ item.price }}</td>
+            <td>
+                <a href="{% url 'edit_menu_item' item.id %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'delete_menu_item' item.id %}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

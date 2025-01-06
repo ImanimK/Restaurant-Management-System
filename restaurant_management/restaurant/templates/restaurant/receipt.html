@@ -1,0 +1,41 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}
+
+{% block title %}Receipt - Order {{ order.id }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header text-center">
+            <h2>Receipt</h2>
+            <p>Order ID: {{ order.id }}</p>
+            <p>Customer: {{ order.customer_name }}</p>
+            <p>Date: {{ order.receipt.created_at }}</p>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in order.items.all %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>${{ item.price }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h4 class="text-end">Total: ${{ order.total_price }}</h4>
+        </div>
+        <div class="card-footer text-center">
+            <button onclick="window.print()" class="btn btn-primary">Print Receipt</button>
+            <a href="{% url 'manager_dashboard' %}" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

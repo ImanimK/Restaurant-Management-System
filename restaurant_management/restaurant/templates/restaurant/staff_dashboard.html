@@ -1,0 +1,37 @@
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Staff Dashboard</h2>
+
+    <h3>Your Orders</h3>
+    <a href="{% url 'create_order' %}" class="btn btn-success mb-3">Place New Order</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.menu_item.name }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>${{ order.total_price }}</td>
+                <td>{{ order.get_status_display }}</td>
+                <td>
+                    <a href="{% url 'print_receipt' order.id %}" class="btn btn-secondary btn-sm">Print Receipt</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+

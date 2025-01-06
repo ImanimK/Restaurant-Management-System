@@ -1,0 +1,14 @@
+{% extends "restaurant/base.html" %}
+
+{% block title %}Home - Restaurant Management{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="adventure-title">Join Us For A <span class="flavorful">Flavorful</span> Adventure</h1>
+    <p>Manage your restaurant efficiently with our system.</p>
+    {% if not user.is_authenticated %}
+        <a href="{% url 'signup' %}" class="btn btn-success">Get Started</a>
+    {% endif %}
+</div>
+{% endblock %}
+
