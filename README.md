@@ -3,6 +3,7 @@
 The Restaurant Management System is a web application built with Django to help restaurants manage their operations efficiently. It provides a manager dashboard for overseeing orders and menu items and a staff dashboard for placing and tracking orders.
 
 🛠 Features
+
 ✅ User authentication (Login, Logout, Signup)
 ✅ Role-based access control (Managers & Staff)
 ✅ Order management (Create, Update, Cancel Orders)
@@ -20,7 +21,7 @@ Deployment: Optional (e.g., Heroku, Render)
 🔹 Step 1: Clone the Repository
 sh
 Copy code
-git clone https://github.com/YOUR_USERNAME/restaurant_management.git
+git clone https://github.com/ImanimK/Restaurant-Management-System.git
 cd restaurant_management
 🔹 Step 2: Set Up a Virtual Environment
 sh
